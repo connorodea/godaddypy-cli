@@ -24,7 +24,10 @@ classifiers = [
 keywords = ["godaddy", "dns", "api", "cli", "domains"]
 dependencies = [
     "godaddypy>=2.5.1",
+    "configloader>=1.0.1",
     "rich>=12.0.0",
+    "pyyaml>=6.0",
+    "configloader>=1.0.1",
 ]
 requires-python = ">=3.7"
 
