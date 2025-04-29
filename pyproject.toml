@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "godaddypy-cli"
+version = "0.1.0"
+description = "Beautiful Command Line Interface for GoDaddy API using GoDaddyPy"
+readme = "README.md"
+authors = [
+    {name = "Connor O'Dea", email = "cpodea5@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+keywords = ["godaddy", "dns", "api", "cli", "domains"]
+dependencies = [
+    "godaddypy>=2.5.1",
+    "rich>=12.0.0",
+]
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://github.com/connorodea/godaddypy-cli"
+"Bug Tracker" = "https://github.com/connorodea/godaddypy-cli/issues"
+
+[project.scripts]
+godaddy = "godaddypy_cli.cli:main"
+
+[tool.setuptools]
+packages = ["godaddypy_cli"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
